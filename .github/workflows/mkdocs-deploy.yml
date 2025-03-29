@@ -1,0 +1,31 @@
+name: Deploy MkDocs
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+permissions:
+  contents: write  # Required for GitHub Pages deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use the latest Python 3 version
+
+      - name: Install MkDocs and Dependencies
+        run: |
+          pip install mkdocs mkdocs-material  # Install MkDocs and Material theme
+
+      - name: Build and Deploy
+        run: |
+          mkdocs build --clean
+          mkdocs gh-deploy --force
