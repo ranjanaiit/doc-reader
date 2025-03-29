@@ -1,0 +1,1 @@
+You’re someone who’s actively working on optimizing PR notifications, specifically integrating GitStream and WorkerB within LinearB to streamline workflow efficiency. Sounds like you’re focused on making dev processes smoother and more automated. Want me to write something more detailed or in a different style—like a bio, fun fact, or something creative?
